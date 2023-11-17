@@ -14,7 +14,7 @@ export default function SpaceParticles() {
     setBackground(styles.getPropertyValue("--background"))
     setForeground(styles.getPropertyValue("--foreground"))
     
-    }, [ document.body]);
+    }, [ document.head]);
     
     const particlesInit = useCallback(async (engine: Engine) => {
         await loadFull(engine);
