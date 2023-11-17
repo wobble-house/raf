@@ -7,8 +7,7 @@ export default function Header(){
         <header className={`z-10 flex flex-col items-center w-full mt-32`}>
             <Nav/>
             <div className={`z-10 absolute py-20 md:py-10 w-full`}>
-                <h2 className={`text-6xl uppercase text-center font-black pb-4`}>{pathname == "" ? "Home" : `${pathname}`}</h2>
-                <hr className={`text-foreground w-1/2 mx-auto`}></hr>
+                <h2 className={`text-6xl uppercase text-center font-black pb-4 hover:text-primary active:text-secondary active:scale-125 hover:scale-110 transition-all ease-in-out`}>{pathname == "" ? "Home" : `${pathname}`}</h2>
             </div>
         </header>
     )

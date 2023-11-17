@@ -6,9 +6,9 @@
   :root {
     --color-foreground: 0, 0, 0;
     --color-background: 255, 255, 255;
-    --color-primary: 255 115 179;
-    --color-secondary: 111 114 185;
-    --color-accent: 20 80 185;
+    --color-primary: 132 204 22;
+    --color-secondary: 202 138 4;
+    --color-accent: 4 68 202;
     --color-destructive: 220 38 38;
     --color-black: 255, 255, 255;
     --color-white: 0, 0, 0,;
@@ -23,9 +23,9 @@
     :root {
       --color-foreground: 255, 255, 255;
       --color-background: 0, 0, 0;
-      --color-primary: 255 115 179;
-      --color-secondary: 111 114 185;
-      --color-accent: 20 80 185;
+      --color-primary: 132 204 22;
+      --color-secondary: 202 138 4;
+      --color-accent: 4 68 202;
       --color-destructive: 220 38 38;
       --color-black: 255, 255, 255;
       --color-white: 0, 0, 0,;
@@ -45,69 +45,23 @@ body {
   color: rgb(var(--color-foreground));
   background: rgb(var(--color-background));
 }
-
-.toggle .hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-.toggle-wrapper {
-  width: 60px;
-  display: block;
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(var(--foreground));
 }
 
-.toggle {
-  height: 25px;
-  width: 60px;
-  background: var(--background);
-  transition: background var(--transition);
-  border-radius: 40px;
-  padding: 3px;
-  position: relative;
-  margin: auto; 
-  cursor: pointer;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-background));
+  border-radius: 5px;
 }
 
-.toggle::before {
-  content: "";
-  display: block;
-  height: 20px;
-  width: 20px;
-  border-radius: 30px;
-  background: var(--foreground);
-  transition: transform var(--transition), background var(--transition);
-  position: absolute;
-  z-index: 2;
-  transform: translate(0);
-  transition: transform var(--transition);
-}
-
-.toggle.enabled::before {
-  transform: translateX(32px);
-}
-
-.toggle input {
-    position: absolute;
-    top: 0;
-  opacity: 0;
-}
-
-.toggle .icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  margin: 0 5px;
-}
-
-.toggle .icons {
-  fill: var(--background);
-  height: 15px;
-  width: 15px;
-  z-index: 0;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-foreground));
 }
