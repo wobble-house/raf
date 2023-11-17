@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --color-foreground: 0, 0, 0;
-    --color-background: 255, 255, 255;
+    --color-foreground: 255 255 255;
+    --color-background: 0 0 0;
     --color-primary: 132 204 22;
     --color-secondary: 202 138 4;
     --color-accent: 4 68 202;
@@ -19,26 +19,6 @@
   #tsparticles canvas {
     background-color: rgb(var(--color-background));
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-foreground: 255, 255, 255;
-      --color-background: 0, 0, 0;
-      --color-primary: 132 204 22;
-      --color-secondary: 202 138 4;
-      --color-accent: 4 68 202;
-      --color-destructive: 220 38 38;
-      --color-black: 255, 255, 255;
-      --color-white: 0, 0, 0,;
-      --foreground: #ffffff;
-      --background: #000000;
-    }
-    #tsparticles canvas {
-      background-color: rgb(var(--color-background));
-    }
-    #tsparticles .particles {
-      color: rgb(var(--color-primary));
-    }
-}
 }
 
 body {

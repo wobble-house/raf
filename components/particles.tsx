@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import React from "react";
 import { useCallback,useEffect, useState, useRef } from "react";
 import type {Container, Engine} from "tsparticles-engine";
@@ -6,15 +6,8 @@ import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
 export function SpaceParticles({children}) {
-    const styles = getComputedStyle(document.body);
-    const [ background, setBackground ] = useState(styles.getPropertyValue("--background"))
-    const [ foreground, setForeground ] = useState(styles.getPropertyValue("--foreground"))
-    console.log(background, foreground)
-    useEffect(() => {
-    setBackground(styles.getPropertyValue("--background"))
-    setForeground(styles.getPropertyValue("--foreground"))
-    
-    }, [ document.head]);
+    const background = '#000000'
+    const foreground = '#FFFFFF'
     
     const particlesInit = useCallback(async (engine: Engine) => {
         await loadFull(engine);
