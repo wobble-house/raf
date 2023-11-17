@@ -2,26 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-foreground: 0, 0, 0;
+    --color-background: 255, 255, 255;
+    --color-primary: 255 115 179;
+    --color-secondary: 111 114 185;
+    --color-accent: 20 80 185;
+    --color-destructive: 220 38 38;
+    --color-black: 255, 255, 255;
+    --color-white: 0, 0, 0,;
+    --foreground: #000000;
+    --background: #ffffff;
+    /* ... */
   }
+  #tsparticles canvas {
+    background-color: rgb(var(--color-background));
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-foreground: 255, 255, 255;
+      --color-background: 0, 0, 0;
+      --color-primary: 255 115 179;
+      --color-secondary: 111 114 185;
+      --color-accent: 20 80 185;
+      --color-destructive: 220 38 38;
+      --color-black: 255, 255, 255;
+      --color-white: 0, 0, 0,;
+      --foreground: #ffffff;
+      --background: #000000;
+    }
+    #tsparticles canvas {
+      background-color: rgb(var(--color-background));
+    }
+    #tsparticles .particles {
+      color: rgb(var(--color-primary));
+    }
+}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+}
+
+.toggle .hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.toggle-wrapper {
+  width: 60px;
+  display: block;
+}
+
+.toggle {
+  height: 25px;
+  width: 60px;
+  background: var(--background);
+  transition: background var(--transition);
+  border-radius: 40px;
+  padding: 3px;
+  position: relative;
+  margin: auto; 
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 30px;
+  background: var(--foreground);
+  transition: transform var(--transition), background var(--transition);
+  position: absolute;
+  z-index: 2;
+  transform: translate(0);
+  transition: transform var(--transition);
+}
+
+.toggle.enabled::before {
+  transform: translateX(32px);
+}
+
+.toggle input {
+    position: absolute;
+    top: 0;
+  opacity: 0;
+}
+
+.toggle .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 5px;
+}
+
+.toggle .icons {
+  fill: var(--background);
+  height: 15px;
+  width: 15px;
+  z-index: 0;
 }
