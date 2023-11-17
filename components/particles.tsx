@@ -1,11 +1,11 @@
-"use client";
+"use client"
 import React from "react";
 import { useCallback,useEffect, useState, useRef } from "react";
 import type {Container, Engine} from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
-export default function SpaceParticles() {
+export function SpaceParticles({children}) {
     const styles = getComputedStyle(document.body);
     const [ background, setBackground ] = useState(styles.getPropertyValue("--background"))
     const [ foreground, setForeground ] = useState(styles.getPropertyValue("--foreground"))
@@ -24,6 +24,7 @@ export default function SpaceParticles() {
         await console.log(container);
     }, []);
     return (
+        <>
         <Particles
             id="tsparticles"
             init={particlesInit}
@@ -93,5 +94,7 @@ export default function SpaceParticles() {
                 },
             }}
         />
+            {children}
+            </>
     );
 };

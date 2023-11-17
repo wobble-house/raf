@@ -1,10 +1,11 @@
+import "server-only"
 import React from 'react'
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css'
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import SpaceParticles from '@/components/particles';
+import {SpaceParticles} from '@/components/particles';
 
 export const metadata = {
   title: {
@@ -22,11 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.variable} ${GeistMono.variable}}`}>
-        <SpaceParticles/>
+        
         <Header/>
+        <SpaceParticles>
         {children}
-
+        </SpaceParticles>
         <Footer/>
+        
       </body>
     </html>
   )

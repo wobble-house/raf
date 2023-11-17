@@ -7,12 +7,6 @@ const nextConfig = {
         RESUME: process.env.RESUME,
       },
       images: {
-        domains: [
-          'www.rossalanford.com',
-          'rossalanford.com',
-          'dev.rossalanford.com',
-          's3.amazonaws.com'
-        ],
         remotePatterns: [
           {
             protocol: 'http',

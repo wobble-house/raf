@@ -1,5 +1,4 @@
 import DetailsCard from "@/components/detailsCard"
-import Nav from "@/components/nav"
 export const metadata = {
   title: 'About',
   description: 'Learn some more about lil ol me',
