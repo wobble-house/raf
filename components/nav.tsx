@@ -38,9 +38,6 @@ export default function Nav(){
                         <Link href={'/portfolio'} className={`${pathname == '/portfolio' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}> 
                           Portfolio
                           </Link>
-                        <Link href={'/stories'} className={`${pathname == '/stories' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
-                          Stories
-                          </Link>
                         <Link href={'/contact'} className={`${pathname == '/contact' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
                           Contact
                           </Link>
