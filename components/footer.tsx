@@ -8,7 +8,7 @@ export default function Footer(){
         <div className="flex flex-row justify-center gap-4 mx-auto">
             <Link
                 href='https://github.com/wobble-house'
-                className={`text-foreground hover:text-primary active:text-secondary`}
+                className={`text-foreground hover:text-primary active:text-secondary font-sans`}
                 passHref
                 target="_blank"
                 rel="noopener noreferrer">

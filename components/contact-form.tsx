@@ -86,23 +86,23 @@ export function ContactForm(){
               className="">
 
             <div className="flex flex-col gap-2 py-2 ">
-                <input id={id} type="text" placeholder="Name*" onChange={e => setName(e.target.value)} name="name" className="w-full focus:border-none focus:ring-accent bg-background" />
+                <input id={id} type="text" placeholder="Name*" onChange={e => setName(e.target.value)} name="name" className="w-full focus:border-none focus:ring-accent bg-background font-mono" />
             <hr className="border-primary border-1"/>
             </div>
 
             <div className="flex flex-col gap-2 py-2">
-                <input id={id} type="email" placeholder="Email*" onChange={e => setEmail(e.target.value)} name="email" className="w-full focus:border-none focus:ring-accent bg-background" />
+                <input id={id} type="email" placeholder="Email*" onChange={e => setEmail(e.target.value)} name="email" className="w-full focus:border-none focus:ring-accent bg-background font-mono" />
             <hr className="border-primary border-1"/>
             </div>
 
             <div className="flex flex-col gap-2 py-2">  
-        <input id={id} type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone" onChange={e => setPhone(e.target.value)} name="phone" className="w-full focus:border-none focus:ring-accent bg-background" />
+        <input id={id} type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone" onChange={e => setPhone(e.target.value)} name="phone" className="w-full focus:border-none focus:ring-accent bg-background font-mono" />
         <hr className="border-primary border-1"/>
             </div>
 
 
         <div className="flex flex-col gap-2 py-2">
-        <textarea id={id} placeholder="Your Message*" onChange={e => setMessage(e.target.value)} name="message" rows={6} className="w-full focus:border-none focus:ring-accent bg-background"></textarea>         
+        <textarea id={id} placeholder="Your Message*" onChange={e => setMessage(e.target.value)} name="message" rows={6} className="w-full focus:border-none focus:ring-accent bg-background font-mono"></textarea>         
         <hr className="border-primary border-1"/>
             </div>
 
@@ -110,13 +110,13 @@ export function ContactForm(){
           <button 
               className="uppercase border-2 border-primary rounded-full px-10 py-2 mx-auto bg-background hover:scale-110 active:scale-105"
               onClick={handleSubmit}>
-                <h3 className="hover:text-primary active:text-secondary">
+                <h3 className="hover:text-primary active:text-secondary font-sans">
               {buttonText}
               </h3>
           </button>
         </div>  
-        { showFailureMessage === true && (<div className="relative"><div className="max-w-[280px] text-center">Error! Please try again. If you continue to encounter problems, please contact <Link href="mailto:marca@ccfil.com">marca@ccfil.com</Link></div></div>) }
-     { showSuccessMessage === true && (<div className="relative"><h4 className="max-w-[280px] text-center">Please allow up to 48 hours for us to review your message. Thanks!</h4></div>) }
+        { showFailureMessage === true && (<div className="relative"><div className="max-w-[280px] text-center font-sans">Error! Please try again. If you continue to encounter problems, please contact <Link href="mailto:marca@ccfil.com">marca@ccfil.com</Link></div></div>) }
+     { showSuccessMessage === true && (<div className="relative"><h4 className="max-w-[280px] text-center font-sans">Please allow up to 48 hours for us to review your message. Thanks!</h4></div>) }
       </form>
       </section>
     )
