@@ -14,7 +14,7 @@
     --color-white: 0, 0, 0,;
     --foreground: #000000;
     --background: #ffffff;
-    /* ... */
+    --transparent: 'transparent';
   }
   #tsparticles canvas {
     background-color: rgb(var(--color-background));

@@ -17,6 +17,7 @@ const config: Config = {
       destructive: 'rgb(var(--color-desctructive))',
       black: 'rgb(var(--color-black))',
       white: 'rgb(var(--color-white))',
+      transparent: 'transparent'
     },
     screens: {
       'sm': '640px',

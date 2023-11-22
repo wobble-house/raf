@@ -40,7 +40,7 @@ export function SpaceParticles({children}) {
                         speed: 3,
                         trail: {
                             fill: { color: background },
-                            length: 80,
+                            length: 50,
                             enable: true,
                         },
                     },
@@ -58,13 +58,13 @@ export function SpaceParticles({children}) {
                     },
                     size: {
                         value: {
-                            min: 0.12,
+                            min: 0.25,
                             max: 12,
                         },
                         animation: {
                             startValue: "min",
                             enable: true,
-                            speed: 0.12,
+                            speed: 0.08,
                             destroy: "max",
                             sync: true,
                         },
@@ -73,7 +73,7 @@ export function SpaceParticles({children}) {
                 emitters: {
                     direction: "none",
                     rate: {
-                        quantity:10,
+                        quantity:16,
                         delay: 0.2,
                     },
                     size: {

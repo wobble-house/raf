@@ -30,7 +30,7 @@ export const projects = [
         }
     },
     {
-        title: "Knowledge-base", 
+        title: "Knowledge base", 
         url: "https://knowledge-base.a2im.org", 
         type: "full-stack", 
         details: "A knowledge-base website created for internal documentation & training used at The American Association of Independent Music (A2IM).  This site features full authentication protection at the domain level.",
@@ -50,7 +50,7 @@ export const projects = [
         }
     },
     {
-        title: "Community Connections", 
+        title: "CCFIL", 
         url: "https://www.ccfil.com/", 
         type: "full-stack", 
         details: "Community Connections provides a comprehensive, semi-independent community-based living program for individuals affected by traumatic brain injury. I have been tasked to modernize their web infrastructure & create new features that integrate into their existing systems",
