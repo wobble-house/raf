@@ -29,19 +29,19 @@ export default function Nav(){
                 </button>
                 <div ref={Navref} className={`flex mx-auto md:block  ${navbar ? 'fixed top-0 flex-col min-h-content items-center w-full h-full scale-100 bg-background opacity-80 text-foreground pt-20 text-center' : 'hidden scale-0 md:scale-100'}`}>
                     <ul className="flex flex-col md:flex-row md:items-end gap-2 text-xs">
-                        <Link href={'/'} className={`${pathname == '/' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans`} onClick={handleClose}>
+                        <Link href={'/'} className={`${pathname == '/' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
                           Home
                           </Link>
-                        <Link href={'/about'} className={`${pathname == '/about' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans`} onClick={handleClose}>
+                        <Link href={'/about'} className={`${pathname == '/about' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
                           About
                           </Link>
-                        <Link href={'/portfolio'} className={`${pathname == '/portfolio' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans`} onClick={handleClose}> 
+                        <Link href={'/portfolio'} className={`${pathname == '/portfolio' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}> 
                           Portfolio
                           </Link>
-                        <Link href={'/stories'} className={`${pathname == '/stories' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans`} onClick={handleClose}>
+                        <Link href={'/stories'} className={`${pathname == '/stories' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
                           Stories
                           </Link>
-                        <Link href={'/contact'} className={`${pathname == '/contact' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans`} onClick={handleClose}>
+                        <Link href={'/contact'} className={`${pathname == '/contact' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
                           Contact
                           </Link>
                     </ul>
