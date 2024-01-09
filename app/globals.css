@@ -9,9 +9,10 @@
     --color-primary: 132 204 22;
     --color-secondary: 202 138 4;
     --color-accent: 4 68 202;
-    --color-destructive: 220 38 38;
+    --color-destructive: 0 93 60;
     --color-black: 255, 255, 255;
     --color-white: 0, 0, 0,;
+    --color-red: 0 84.24 60;
     --foreground: #000000;
     --background: #ffffff;
     --transparent: 'transparent';
