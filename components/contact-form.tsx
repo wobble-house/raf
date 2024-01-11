@@ -81,7 +81,7 @@ export function ContactForm(){
       console.log(name, email, phone, message);
     };
     return (
-      <section className='relative z-80 w-full md:w-[280px] px-6'>
+      <section className='relative z-70 w-full md:w-[280px] px-6'>
               <form
               className="">
 
