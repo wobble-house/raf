@@ -14,7 +14,7 @@ export default function Nav(){
         setNavbar(false)
     }
     return(
-        <nav className="flex relative z-80 md:justify-center top-0 w-full mt-4">
+        <nav className="flex relative z-10 md:justify-center top-0 mt-4 mx-auto rounded-md p-4 bg-gradient-radial from-zinc-900 to-background shadow-xl">
             <div className="flex flex-col-reverse md:flex-row flex-grow justify-end">
                 <button className="fixed z-90 md:hidden px-2 rounded-lg focus mr-auto mt-4 ml-5 transition ease-in-out" onMouseDown={handleMainNavButton}>
                   {navbar ? (

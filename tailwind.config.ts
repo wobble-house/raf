@@ -14,12 +14,35 @@ const config: Config = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
-      wiggle: 'wiggle 1s ease-in-out infinite',
+      wiggle: 'wiggle 3s ease-in-out infinite',
       slideUpEnter: 'slideUpEnter .3s ease-in-out',
       slideUpLeave: 'slideUpLeave .3s ease-in-out',
     },
     backgroundOpacity: ({ theme }) => theme('opacity'),
-    colors:{
+    colors: ({ colors }) => ({
+      inherit: colors.inherit,
+      current: colors.current,
+      slate: colors.slate,
+      gray: colors.gray,
+      zinc: colors.zinc,
+      neutral: colors.neutral,
+      stone: colors.stone,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      lime: colors.lime,
+      green: colors.green,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
+      rose: colors.rose,
+      red: colors.red,
       background: 'rgb(var(--color-background))',
       foreground: 'rgb(var(--color-foreground))',
       primary: 'rgb(var(--color-primary))',
@@ -28,8 +51,31 @@ const config: Config = {
       destructive: 'rgb(var(--color-desctructive))',
       black: 'rgb(var(--color-black))',
       white: 'rgb(var(--color-white))',
-      red: 'rgb(var(--color-red))',
-      transparent: 'transparent'
+      transparent: 'transparent',
+    }),
+    gradientColorStops: ({ theme }) => theme('colors'),
+    gradientColorStopPositions: {
+      '0%': '0%',
+      '5%': '5%',
+      '10%': '10%',
+      '15%': '15%',
+      '20%': '20%',
+      '25%': '25%',
+      '30%': '30%',
+      '35%': '35%',
+      '40%': '40%',
+      '45%': '45%',
+      '50%': '50%',
+      '55%': '55%',
+      '60%': '60%',
+      '65%': '65%',
+      '70%': '70%',
+      '75%': '75%',
+      '80%': '80%',
+      '85%': '85%',
+      '90%': '90%',
+      '95%': '95%',
+      '100%': '100%',
     },
     keyframes: {
       spin: {
@@ -59,8 +105,21 @@ const config: Config = {
         },
       },
       wiggle: {
-        '0%, 100%': { transform: 'rotate(-3deg)' },
-        '50%': { transform: 'rotate(3deg)' },
+        '0%': { 
+          transform: 'rotate(-3deg) scaleX(1.1) scaleY(1.1)',
+        },
+       '25%': {
+        transform: 'scaleX(1.2) scaleY(1.2)',
+        },
+        '50%': { 
+          transform: 'rotate(3deg) scaleX(1) scaleY(1)', 
+        },
+        '75%': {
+          transform: 'scaleX(1.2) scaleY(1.2)',
+        },
+        '100%': { 
+          transform: 'rotate(-3deg) scaleX(1.1) scaleY(1.1)',
+        },
       },
       slideUpEnter: {
         '0%': {
@@ -123,6 +182,9 @@ const config: Config = {
       100: '1',
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],

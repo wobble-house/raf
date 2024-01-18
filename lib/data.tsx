@@ -13,7 +13,8 @@ export const projects = [
         image: {
             src:'/images/A2IM.png',
             alt:'home screen of a2im.org'
-        }
+        },
+        order: 1
     },
     {
         title: "Libera Awards", 
@@ -29,7 +30,8 @@ export const projects = [
         image: {
             src:'/images/LiberaAwards.png',
             alt:'home screen of LiberaAwards.com'
-        }
+        },
+        order: 2
     },
     {
         title: "Indie Week", 
@@ -45,7 +47,8 @@ export const projects = [
         image: {
             src:'/images/IndieWeek.png',
             alt:'home screen of a2imindieweek.org'
-        }
+        },
+        order: 3
     },
     {
         title: "Knowledge base", 
@@ -61,7 +64,8 @@ export const projects = [
         image: {
             src:'/images/KnowledgeBase.png',
             alt:'home screen of a2im&apos;s Knowledge Base'
-        }
+        },
+        order: 4
     },
     {
         title: "Headless CMS", 
@@ -77,7 +81,8 @@ export const projects = [
         image: {
             src:'/images/HeadlessCMS.png',
             alt:'home screen of A2IM&apos;s Headless CMS'
-        }
+        },
+        order: 5
     },
     {
         title: "CCFIL", 
@@ -93,7 +98,8 @@ export const projects = [
         image: {
             src:'/images/CCFIL.png',
             alt:'home screen of ccfil.com'
-        }
+        },
+        order: 6
     }
   ]
 
