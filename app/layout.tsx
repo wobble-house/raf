@@ -4,7 +4,7 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css'
 import Footer from '@/components/footer';
-import Header from '@/components/header';
+import Nav from "@/components/nav";
 import {SpaceParticles} from '@/components/particles';
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark`}>
       <body className={`${GeistSans.variable} ${GeistMono.variable}}`}>
-        <Header/>
+        <Nav/>
         <SpaceParticles>
         {children}
         </SpaceParticles>

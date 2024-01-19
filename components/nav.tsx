@@ -14,7 +14,7 @@ export default function Nav(){
         setNavbar(false)
     }
     return(
-        <nav className="flex relative z-10 md:justify-center top-0 mt-4 mx-auto rounded-md p-4 bg-gradient-radial from-zinc-900 to-background shadow-xl">
+        <nav className="flex relative md:z-10 md:justify-center top-0 mt-4 mx-auto rounded-md md:p-4">
             <div className="flex flex-col-reverse md:flex-row flex-grow justify-end">
                 <button className="fixed z-90 md:hidden px-2 rounded-lg focus mr-auto mt-4 ml-5 transition ease-in-out" onMouseDown={handleMainNavButton}>
                   {navbar ? (
@@ -27,7 +27,7 @@ export default function Nav(){
                     </svg>
                   )}
                 </button>
-                <div ref={Navref} className={`flex mx-auto md:block  ${navbar ? 'z-80 fixed top-0 flex-col min-h-content items-center w-full h-full scale-100 bg-background opacity-80 text-foreground pt-20 text-center' : 'hidden scale-0 md:scale-100'}`}>
+                <div ref={Navref} className={`flex mx-auto md:block  ${navbar ? 'z-80 fixed top-0 flex-col min-h-content items-center w-full h-full scale-100 bg-gradient-radial from-zinc-900 to-background/75 text-foreground pt-20 text-center' : 'hidden scale-0 md:scale-100'}`}>
                     <ul className="flex flex-col md:flex-row md:items-end gap-2 text-xs">
                         <Link href={'/'} className={`${pathname == '/' ? 'scale-125 px-2 font-normal text-primary hover:text-secondary' : 'scale-100 font-thin hover:text-primary'} transition-all ease-in-out font-sans uppercase tracking-wider`} onClick={handleClose}>
                           Home
