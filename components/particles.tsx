@@ -18,6 +18,7 @@ export function SpaceParticles({children}) {
     }, []);
     return (
         <>
+        <div className="">
         <Particles
             id="tsparticles"
             init={particlesInit}
@@ -27,6 +28,32 @@ export function SpaceParticles({children}) {
                     color: {
                         value: background
                     }
+                },
+                interactivity: {
+                    detectsOn: "window",
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        onDiv: {
+                            enable: false,
+                            type: "circle",
+                        },
+                        onHover: {
+                            enable: true,
+                            mode: "grab",
+                            parallax: {
+                                enable: true,
+                                force: 60,
+                                smooth: 10,
+                            },
+                        },
+                        resize: {
+                            delay: 0.5,
+                            enable: true,
+                        },
+                    },
                 },
                 particles: {
                     color: {
@@ -86,7 +113,7 @@ export function SpaceParticles({children}) {
                     },
                 },
             }}
-        />
+        /></div>
             {children}
             </>
     );
