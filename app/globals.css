@@ -11,10 +11,8 @@
     --color-accent: 4 68 202;
     --color-destructive: 0 93 60;
     --color-black: 255, 255, 255;
-    --color-white: 0, 0, 0,;
     --foreground: #000000;
     --background: #ffffff;
-    --transparent: 'transparent';
   }
   #tsparticles canvas {
     background-color: rgb(var(--color-background));

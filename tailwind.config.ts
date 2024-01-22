@@ -14,14 +14,33 @@ const config: Config = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
-      wiggle: 'wiggle 3s ease-in-out infinite',
+      slomo: 'slomo 30s ease-in-out infinite',
+      text: 'text 0.3s ease infinite',
+      linewiggle: 'linewiggle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      wiggle: 'wiggle .6s ease-in-out infinite',
+      hardwiggle: 'wiggle .2s ease-in-out infinite',
       slideUpEnter: 'slideUpEnter .3s ease-in-out',
       slideUpLeave: 'slideUpLeave .3s ease-in-out',
     },
     backgroundOpacity: ({ theme }) => theme('opacity'),
+    boxShadow: {
+      sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+      DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+      md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+      lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+      xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+      '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      none: 'none',
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      '4xl': '0 45px 70px -10px rgba(0, 0, 0, 0.5)',
+    },
+    boxShadowColor: ({ theme }) => theme('colors'),
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,
+      white: colors.white,
+      transparent: colors.transparent,
       slate: colors.slate,
       gray: colors.gray,
       zinc: colors.zinc,
@@ -50,8 +69,19 @@ const config: Config = {
       accent: 'rgb(var(--color-accent))',
       destructive: 'rgb(var(--color-desctructive))',
       black: 'rgb(var(--color-black))',
-      white: 'rgb(var(--color-white))',
-      transparent: 'transparent',
+    }),
+    dropShadow: {
+      sm: '0 1px 1px rgb(0 0 0 / 0.05)',
+      DEFAULT: ['0 1px 2px rgb(0 0 0 / 0.1)', '0 1px 1px rgb(0 0 0 / 0.06)'],
+      md: ['0 4px 3px rgb(0 0 0 / 0.07)', '0 2px 2px rgb(0 0 0 / 0.06)'],
+      lg: ['0 10px 8px rgb(0 0 0 / 0.04)', '0 4px 3px rgb(0 0 0 / 0.1)'],
+      xl: ['0 20px 13px rgb(0 0 0 / 0.03)', '0 8px 5px rgb(0 0 0 / 0.08)'],
+      '2xl': '0 25px 25px rgb(0 0 0 / 0.15)',
+      none: '0 0 #0000',
+    },
+    fill: ({ theme }) => ({
+      none: 'none',
+      ...theme('colors'),
     }),
     gradientColorStops: ({ theme }) => theme('colors'),
     gradientColorStopPositions: {
@@ -104,21 +134,93 @@ const config: Config = {
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
       },
-      wiggle: {
-        '0%': { 
-          transform: 'rotate(-3deg) scaleX(1.1) scaleY(1.1)',
+      slomo: {
+        '0%, 100%': {
+          scale: '1',
         },
-       '25%': {
-        transform: 'scaleX(1.2) scaleY(1.2)',
+        '50%': {
+          transform:'translateX(35%) translateY(40%)',
+          scale: '6',
+          rotate: '8deg',
         },
-        '50%': { 
-          transform: 'rotate(3deg) scaleX(1) scaleY(1)', 
+      },
+      text: {
+        '0%': {
+          'background-size': '50% 50%',
+          'background-position': 'center',
+        },
+        '25%': {
+          'background-size': '100% 100%',
+          'background-position': 'right',
+        },
+        '50%': {
+          'background-size': '50% 50%',
+          'background-position': 'bottom',
         },
         '75%': {
-          transform: 'scaleX(1.2) scaleY(1.2)',
+          'background-size': '100% 100%',
+          'background-position': 'left',
+        },
+        '100%': {
+          'background-size': '50% 50%',
+          'background-position': 'top',
+        },
+      },
+      linewiggle: {
+        '0%': { 
+          transform: 'scale(1)',
+        },
+       '25%': {
+        transform: 'scale(1.15)',
+        },
+        '50%': { 
+          transform: 'scale(1)', 
+        },
+        '75%': {
+          transform: 'scale(1.15)',
         },
         '100%': { 
-          transform: 'rotate(-3deg) scaleX(1.1) scaleY(1.1)',
+          transform: 'scale(1)',
+        },
+      },
+      wiggle: {
+        '0%': { 
+          transform: 'scale(1.1)',
+          transformOrigin: '150px 50px',
+          x: '0px',
+          y: '0px',
+        },
+        '10%': { 
+          transform: 'scale(0.9)',
+        },
+       '25%': {
+        transform: 'rotate(1.2deg) scale(1.08)',
+        x: '2px',
+        y: '1px',
+        },
+        '35%': { 
+          transform: 'scale(1.1)',
+        },
+        '50%': { 
+          transform: 'rotate(-1.2deg) scale(1)', 
+          x: '-3px',
+          y: '5px',
+        },
+        '60%': { 
+          transform: 'rotate(1.2deg) scale(1.2)',
+        },
+        '75%': {
+          transform: 'rotate(-2deg) scale(1.18)',
+          x: '4px',
+          y: '-2px',
+        },
+        '90%': { 
+          transform: 'rotate(1.2deg) scale(0.9)',
+        },
+        '100%': { 
+          transform: 'scale(1.1)',
+          x: '0px',
+          y: '0px',
         },
       },
       slideUpEnter: {
