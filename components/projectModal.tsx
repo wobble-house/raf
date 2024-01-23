@@ -20,7 +20,7 @@ export default function ProjectModal({id, details, title, image, list, listTitle
         >
           <div className={`flex transform justify-center items-center overscroll-contain px-3 pt-3 ${isModalOpen ? "animate-slideUpEnter":"animate-slideUpLeave"}`}>
             <div className="flex flex-col transform duration-300 ease-in-out p-2">
-              <button className="absolute justify-self-end right-0 top-0 hover:scale-105 rounded-sm bg-red-600 pb-1 z-40 -mt-6 h-6 w-6 active:animate-hardwiggle" onClick={!isModalOpen ? close : open }>
+              <button className="absolute justify-self-end right-0 top-0 hover:scale-105 rounded-sm bg-accent2 pb-1 z-40 -mt-6 h-6 w-6 active:animate-hardwiggle" onClick={!isModalOpen ? close : open }>
                 <p className="text-2xl hover:animate-pulse -mt-[5px] text-gray-300 font-black">x</p>
               </button>
               <div ref={ref} className="">

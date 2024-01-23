@@ -67,6 +67,7 @@ const config: Config = {
       primary: 'rgb(var(--color-primary))',
       secondary: 'rgb(var(--color-secondary))',
       accent: 'rgb(var(--color-accent))',
+      accent2: 'rgb(var(--color-accent2))',
       destructive: 'rgb(var(--color-desctructive))',
       black: 'rgb(var(--color-black))',
     }),

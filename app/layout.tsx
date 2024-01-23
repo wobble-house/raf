@@ -12,6 +12,20 @@ export const metadata = {
     default: 'Ross Alan Ford',
     template: '%s | Ross Alan Ford',
   },
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/images/RAF.png',
+        href: '/images/RAF.png',
+      },
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/images/RAF.png',
+        href: '/images/RAF.png',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
