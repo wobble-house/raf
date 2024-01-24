@@ -11,12 +11,12 @@ export default function Portfolio() {
     <main className="flex min-h-screen flex-col max-w-3xl mx-auto gap-12">
       <div className="relative flex flex-col justify-between pt-8 px-8 bg-gradient-radial from-zinc-900 to-background/75 rounded-md">
         <H1>Professional Projects</H1>
-        <Line/>
+        <Line direction="left"/>
         <ProjectList projects={projects}/>
       </div>
       <div className="relative flex flex-col justify-between pt-8 px-8 bg-gradient-radial from-zinc-900 to-background/75 rounded-md">
         <H1>Personal Projects</H1>
-        <Line/>
+        <Line direction="left"/>
         <ProjectList projects={projects}/>
       </div>
     </main>

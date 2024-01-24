@@ -17,8 +17,10 @@ const config: Config = {
       slomo: 'slomo 30s ease-in-out infinite',
       text: 'text 0.3s ease infinite',
       linewiggle: 'linewiggle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      reverselinewiggle: 'linewiggle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite reverse',
       wiggle: 'wiggle .6s ease-in-out infinite',
       hardwiggle: 'wiggle .2s ease-in-out infinite',
+      modalEnter: 'modalEnter .2s ease-in-out',
       slideUpEnter: 'slideUpEnter .3s ease-in-out',
       slideUpLeave: 'slideUpLeave .3s ease-in-out',
     },
@@ -222,6 +224,16 @@ const config: Config = {
           transform: 'scale(1.1)',
           x: '0px',
           y: '0px',
+        },
+      },
+      modalEnter: {
+        '0%': {
+          opacity: '0',
+          transform: 'scale(0)',
+        },
+        '100%': {
+          opacity: '100',
+          transform: 'scale(1)',
         },
       },
       slideUpEnter: {
