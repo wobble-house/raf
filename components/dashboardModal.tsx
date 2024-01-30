@@ -1,9 +1,9 @@
 'use client';
 import { useRef, useState, useEffect } from "react";
 import { useOnClickOutside } from "./click-handler";
-import {DashboardDetails} from "./details";
+import { DashboardDetails } from "./details";
 import { AnimatePresence, motion, useAnimate, stagger, } from "framer-motion";
-export default function DashboardModal({id, children, column, details, position, title, list, listTitle, link}:{id, children, column?, details: string, list: { item: string, link: string}[], listTitle: string, link: any, position?: any, title: string}){
+export default function DashboardModal({id, children, column, details, position, title, list, listTitle, link}:{id, children, column?, details: string, list: { alt: string, href: string, src: string}[], listTitle: string, link: any, position?: any, title: string}){
     const ref = useRef();
     const [isModalOpen, setModalOpen] = useState(false)
     const close = () => setModalOpen(false);
@@ -38,11 +38,10 @@ export default function DashboardModal({id, children, column, details, position,
               </button>
               <div ref={ref} className="">
                 <DashboardDetails
-                  details={details}
                   link={link}
                   list={list}
                   title={title}
-                  listTitle={listTitle} />
+                  listTitle={listTitle}>""</DashboardDetails>
               </div>
             </div>
           </motion.li>

@@ -1,3 +1,5 @@
+const withMDX = require('@next/mdx')()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'standalone',
@@ -58,8 +60,21 @@ const nextConfig = {
           issuer: /\.[jt]sx?$/,
           use: ['@svgr/webpack'],
         })
+        config.module.rules.push({
+          test: /\.mdx?$/,
+          use: [
+            {
+              loader: '@mdx-js/loader',
+              /** @type {import('@mdx-js/loader').Options} */
+              options: {/* jsxImportSource: …, otherOptions… */}
+            }
+          ]
+        })
         return config
       },
+        // Configure `pageExtensions` to include MDX files
+  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  // Optionally, add any other Next.js config below
 }
 
-module.exports = nextConfig
+module.exports = withMDX(nextConfig)

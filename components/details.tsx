@@ -5,14 +5,14 @@ import ImageHandler, { SVG } from "./image-handler"
 import { H1,H3 } from "./header-text"
 
 export function AboutDetails({ 
-    details,
+    children,
     image,
     link,
     list,
     listTitle,
     title,
    }:{ 
-      details: string,
+      children?: any,
       image: {
           src: string,
           alt: string
@@ -35,7 +35,7 @@ export function AboutDetails({
                 <Line direction="left"/>
             </div>
         </div>
-        <DetailsCard details={details} link={link} listTitle={listTitle} list={list}/>
+        <DetailsCard link={link} listTitle={listTitle} list={list} title={"Bio"} markdown>{children}</DetailsCard>
     </div>
     )
 }
@@ -73,7 +73,7 @@ export function ProjectDetails({
                 <Line direction="left"/>
             </div>
         </div>
-        <DetailsCard details={details} link={link} listTitle={listTitle} list={list}/>
+        <DetailsCard details={details} link={link} listTitle={listTitle} list={list} title={"Details"}/>
     </div>
     )
 }
@@ -103,7 +103,7 @@ export function DashboardDetails({
                 <Line direction="left"/>
             </div>
         </div>
-        <DetailsCard details={details} link={link} listTitle={listTitle} list={list}/>
+        <DetailsCard details={details} link={link} listTitle={listTitle} list={list} title={"Details"}/>
     </div>
     )
 }
@@ -124,19 +124,17 @@ export function SkillsCard({listTitle,list}){
     )
 }
 
-export function DetailsCard({details,link,listTitle,list}){
+export function DetailsCard({children, details,link,listTitle,list,title,markdown}:{children?, details?:string,link:any,listTitle:string,list:{alt:string,href:string,src:string}[],title:string,markdown?:boolean}){
 
     return(
         <div className="rounded-md">
             <SkillsCard list={list} listTitle={listTitle}/>
             <div className={`flex flex-col gap-1 shadow-xl p-8 mb-20 rounded-lg group bg-gradient-radial from-zinc-900 to-background/75`}>
                 
-                <H3>Details</H3>
+                <H3>{title}</H3>
             
                 <Line direction="left"/>
-                <p className={`font-thin text-sm`}>
-                    {details}
-                </p>
+                {markdown ? children : <p className={`font-thin text-sm`}>{details}</p>}
                 <div className="flex flex-row gap-2 w-full justify-evenly">
                 <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse active:scale-90 px-2 hover:scale-110">Link to website</Link>
                 <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse px-2 hover:scale-110">Github</Link>
