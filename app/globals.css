@@ -19,6 +19,20 @@
     background-color: rgb(var(--color-background));
   }
 }
+@font-face {
+  font-family: 'GeistSans';
+  src: url('../public/fonts/Geist/GeistVariableVF.woff2');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GeistMono';
+  src: url('../public/fonts/GeistMono/GeistMonoVariableVF.woff2');
+  font-style: medium;
+  font-weight: normal;
+  font-display: swap;
+}
 
  #mdx h1 {
     font-size: 1.8rem;
@@ -72,4 +86,13 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(var(--color-foreground));
+}
+
+.prevent-selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }

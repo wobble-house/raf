@@ -68,7 +68,7 @@ export default function ProjectModal({id, details, title, image, list, listTitle
           opacity: 0,
           scale: 0,
         }}
-        className={`relative group flex flex-col overscroll-none rounded-lg bg-background aspect-video hover:text-center overflow-hidden hover:scale-110 z-10 transition-all ease-in-out w-80 md:w-60 lg:w-80`} onClick={!isModalOpen ? open : close } style={{cursor: "pointer"}}>
+        className={`relative group flex flex-col overscroll-none rounded-lg bg-background aspect-video hover:text-center overflow-hidden hover:scale-110 z-10 transition-all ease-in-out w-80 md:w-60 lg:w-80 prevent-selection`} onClick={!isModalOpen ? open : close } style={{cursor: "pointer"}}>
                 <Image src={image.src} fill alt={image.alt} style={{objectFit: 'cover'}} sizes={'50vw'} className={`blur-sm hover:blur-none active:animate-hardwiggle transition-all ease-in-out hover:scale-150 hover:animate-slomo delay-100`}/>
                 <div className={`relative text-left justify-center flex flex-col p-2 drop-shadow-xl w-full rounded-md overflow-none mr-auto group-hover:mx-auto bg-gradient-to-t from-background from-80% to-transparent mt-auto transition ease-in-out overscroll-none`}>
                 

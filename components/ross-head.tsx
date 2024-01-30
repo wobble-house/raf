@@ -10,7 +10,7 @@ export default function RossHead(){
         transition={{duration: 9, delay: 1}}
         className="relative h-80 w-52 z-10 drop-shadow-2xl">
         <Link href={'/about'}>
-        <ImageHandler src={'/images/ross-head.png'} fill alt="Ross's head" className="scale-100 hover:animate-ping transition-all ease-in-out active:animate-hardwiggle" />
+        <ImageHandler src={'/images/ross-head.png'} fill alt="Ross's head" className="scale-100 hover:animate-hardwiggle transition-all ease-in-out active:animate-ping" />
         </Link>
         </motion.div>
     )

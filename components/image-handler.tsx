@@ -30,7 +30,7 @@ export function SVG({href, src, alt}){
     return (
             <Link href={href} className={`relative `} rel="noopener noreferrer" target="_blank">
                 <div title={alt} className='relative w-[50px] h-[50px] hover:animate-wiggle active:animate-hardwiggle'>
-                <Image src={src} alt={alt} fill style={{objectFit: "contain"}} sizes="(max-width: 768px) 100vw, 33vw" className=''/>
+                <Image src={src} alt={alt} fill style={{objectFit: "contain"}} sizes="(max-width: 768px) 100vw, 33vw" className='prevent-selection'/>
                 </div>
             </Link>
     );
