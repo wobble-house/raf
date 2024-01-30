@@ -6,7 +6,7 @@ export const about = {
         {
             alt: "Linux",
             src: "/logos/linux.svg",
-            href: "https://www.linux.org/"
+            href: "https://ubuntu.com/"
         },
         {
             alt: "Windows",
