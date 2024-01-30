@@ -6,7 +6,7 @@ import { useOnClickOutside } from "./click-handler";
 import {ProjectDetails} from "./details";
 import { H3 } from "./header-text";
 import Line from "./line";
-export default function ProjectModal({id, details, title, image, list, listTitle, link}:{id, details: string, list: { item: string, link: string}[], listTitle: string, link: any, title: string, image:{src:string, alt:string}}){
+export default function ProjectModal({id, details, title, image, list, listTitle, link}:{id, details: string, list: { alt: string, href: string, src: string}[], listTitle: string, link: any, title: string, image:{src:string, alt:string}}){
     const ref = useRef();
     const [isModalOpen, setModalOpen] = useState(false)
     const close = () => setModalOpen(false);

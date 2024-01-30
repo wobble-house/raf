@@ -65,7 +65,9 @@ export function ProjectDetails({
     return(
     <div className={`relative flex flex-col max-w-lg mx-auto justify-center gap-10 shadow-2xl`}>
         <div className={`relative flex flex-col md:flex-row rounded-lg gap-8 md:gap-4 items-start justify-start group overscroll-auto bg-gradient-radial from-accent from-25% via-background shadow-2xl`}>
-            <ImageHandler src={image.src} alt={image.alt} className='z-20 absolute pt-20'/>
+            <div className={`absolute w-full h-[80%] overflow-hidden mt-20 rounded-b-lg`}>
+                <ImageHandler src={image.src} alt={image.alt} fill style={{objectFit: 'cover'}} sizes={'80vw'} className='z-20 animate-slomo transition-all ease-in-out'/>
+            </div>
             <div className={`z-20 relative flex flex-col px-4 pt-2 pb-4 w-full group min-h-[300px] shadow-2xl`}>
                 <H1>{title}</H1>
                 <Line direction="left"/>
