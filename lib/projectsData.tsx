@@ -11,7 +11,7 @@ export const projects = [
             },
             {
                 alt: "AWS",
-                src: "/logos/AWS.svg",
+                src: "/logos/aws.svg",
                 href: "https://aws.amazon.com/"
             },
             {
@@ -144,7 +144,7 @@ export const projects = [
             },
             {
                 alt: "AWS Route 53",
-                src: "/logos/AWSRoute53.svg",
+                src: "/logos/AWSroute53.svg",
                 href: "https://aws.amazon.com/route53/"
             },
             {
@@ -263,7 +263,7 @@ export const projects = [
             },
             {
                 alt: "AWS Route 53",
-                src: "/logos/AWSRoute53.svg",
+                src: "/logos/AWSroute53.svg",
                 href: "https://aws.amazon.com/route53/"
             },
             {
@@ -381,7 +381,7 @@ export const projects = [
             },
             {
                 alt: "AWS Route 53",
-                src: "/logos/AWSRoute53.svg",
+                src: "/logos/AWSroute53.svg",
                 href: "https://aws.amazon.com/route53/"
             },
             {
@@ -469,12 +469,12 @@ export const projects = [
             },
             {
                 alt: "AWS Route 53",
-                src: "/logos/AWSRoute53.svg",
+                src: "/logos/AWSroute53.svg",
                 href: "https://aws.amazon.com/route53/"
             },
             {
                 alt: "AWS Cloudfront",
-                src: "/logos/AWSCloudfront.svg",
+                src: "/logos/AWScloudfront.svg",
                 href: "https://aws.amazon.com/cloudfront/"
             },
             {
@@ -597,12 +597,12 @@ export const projects = [
             },
             {
                 alt: "AWS Route 53",
-                src: "/logos/AWSRoute53.svg",
+                src: "/logos/AWSroute53.svg",
                 href: "https://aws.amazon.com/route53/"
             },
             {
                 alt: "AWS Workmail",
-                src: "/logos/AWSWorkmail.svg",
+                src: "/logos/workmail.svg",
                 href: "https://aws.amazon.com/workmail/"
             },
             {

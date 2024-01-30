@@ -130,12 +130,12 @@ export const about = {
             },
             {
                 alt: "AWS Route 53",
-                src: "/logos/AWSRoute53.svg",
+                src: "/logos/AWSroute53.svg",
                 href: "https://aws.amazon.com/route53/"
             },
             {
                 alt: "AWS Cloudfront",
-                src: "/logos/AWSCloudfront.svg",
+                src: "/logos/AWScloudfront.svg",
                 href: "https://aws.amazon.com/cloudfront/"
             },
             {
