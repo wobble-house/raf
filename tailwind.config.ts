@@ -301,8 +301,8 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
+        sans: ['var(--font-GeistSans)'],
+        mono: ['var(--font-GeistMono)'],
       },
     },
     zIndex: {
