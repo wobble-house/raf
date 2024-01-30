@@ -1,5 +1,5 @@
 import {AboutDetails} from "@/components/details"
-import { about } from "../../lib/data";
+import { about } from "../../lib/aboutData";
 export const metadata = {
   title: 'About',
   description: 'Learn some more about lil ol me',

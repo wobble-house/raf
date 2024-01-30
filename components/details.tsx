@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link"
 import Line from "./line"
-import ImageHandler from "./image-handler"
+import ImageHandler, { SVG } from "./image-handler"
 import { H1,H3 } from "./header-text"
 
 export function AboutDetails({ 
@@ -19,8 +19,9 @@ export function AboutDetails({
       },
       link: any,
       list:{
-                item: string,
-                link: string
+        alt: string
+        href: string,
+        src: string,
             }[],
       listTitle: string,
       title : string,
@@ -54,8 +55,9 @@ export function ProjectDetails({
       },
       link: any,
       list:{
-                item: string,
-                link: string
+        alt: string
+        href: string,
+        src: string,
             }[],
       listTitle: string,
       title : string,
@@ -84,8 +86,9 @@ export function DashboardDetails({
       details: string,
       link: any,
       list:{
-                item: string,
-                link: string
+                alt: string,
+                href: string,
+                src: string,
             }[],
       listTitle: string,
       title : string,
@@ -105,14 +108,14 @@ export function DashboardDetails({
 
 export function SkillsCard({listTitle,list}){
     return(
-        <div className={`flex flex-col gap-1 shadow-xl p-8 mb-10 rounded-lg group bg-gradient-radial from-zinc-900 to-background/75`}>
-        <ul className="relative h-full list-inside list-disc py-2 font-mono group">
-            <H3>{listTitle}</H3>
+        <div className={`relative flex flex-col gap-1 shadow-xl p-8 mb-10 rounded-lg group bg-gradient-radial from-zinc-900 to-background/75`}>
+                    <H3>{listTitle}</H3>
             <Line direction="left"/>
+            <ul className="relative h-full flex flex-wrap py-2 group gap-10 justify-center">
             { list.map((item, index) => (
-            <li key={index} className={`text-foreground text-sm group-hover:scale-110 group-hover:ml-5 group-hover:text-primary`}>
-                <Link href={item.link}>{item.item}</Link>
-            </li>
+                        <li key={index} className={`relative max-w-[100px] `}>
+                <SVG href={item.href} src={item.src} alt={item.alt}/>
+                </li>
             ))}
         </ul>
     </div>
@@ -132,10 +135,10 @@ export function DetailsCard({details,link,listTitle,list}){
                 <p className={`font-thin text-sm`}>
                     {details}
                 </p>
-                <ul className="flex flex-row gap-2 w-full justify-evenly">
+                <div className="flex flex-row gap-2 w-full justify-evenly">
                 <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse active:scale-90 px-2 hover:scale-110">Link to website</Link>
                 <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse px-2 hover:scale-110">Github</Link>
-                </ul>
+                </div>
         </div>
         </div>
     )

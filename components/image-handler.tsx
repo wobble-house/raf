@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ImageHandler(props){
     const { src, fallbackSrc, alt, ...rest } = props;
@@ -22,5 +23,15 @@ export default function ImageHandler(props){
                 setImgSrc(fallbackSrc);
             }}
         />
+    );
+};
+
+export function SVG({href, src, alt}){
+    return (
+            <Link href={href} className={`relative `} rel="noopener noreferrer" target="_blank">
+                <div title={alt} className='w-[50px] h-[50px]'>
+                <Image src={src} alt={alt} fill style={{objectFit: "contain"}} sizes="(max-width: 768px) 100vw, 33vw" className='hover:animate-hardwiggle'/>
+                </div>
+            </Link>
     );
 };
