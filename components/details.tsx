@@ -28,7 +28,7 @@ export function AboutDetails({
    }){
     return(
         <div className={`relative flex flex-col max-w-lg mx-auto justify-center gap-10`}>
-    <div className={`relative flex flex-col md:flex-row rounded-lg gap-8 md:gap-4 items-start justify-start group overscroll-auto bg-gradient-radial from-zinc-900 to-background shadow-2xl`}>
+    <div className={`relative flex flex-col md:flex-row rounded-lg gap-8 md:gap-4 items-start justify-start group overscroll-auto bg-gradient-radial from-zinc-700 to-zinc-900/80 shadow-2xl`}>
             <ImageHandler src={image.src} alt={image.alt} className='z-20 absolute pt-20 rounded-lg'/>
             <div className={`z-20 relative flex flex-col px-4 pt-2 pb-4 w-full group min-h-[300px] shadow-2xl`}>
                 <H1>{title}</H1>
@@ -64,7 +64,7 @@ export function ProjectDetails({
    }){
     return(
     <div className={`relative flex flex-col max-w-lg mx-auto justify-center gap-10 shadow-2xl`}>
-        <div className={`relative flex flex-col md:flex-row rounded-lg gap-8 md:gap-4 items-start justify-start group overscroll-auto bg-gradient-radial from-accent from-25% via-background shadow-2xl`}>
+        <div className={`relative flex flex-col md:flex-row rounded-lg gap-8 md:gap-4 items-start justify-start group overscroll-auto bg-gradient-radial from-zinc-700 from-25% to-zinc-900/80 shadow-2xl`}>
             <div className={`absolute w-full h-[80%] overflow-hidden mt-20 rounded-b-lg`}>
                 <ImageHandler src={image.src} alt={image.alt} fill style={{objectFit: 'cover'}} sizes={'80vw'} className='z-20 animate-slomo transition-all ease-in-out'/>
             </div>
@@ -81,7 +81,7 @@ export function ProjectDetails({
 
 export function SkillsCard({listTitle,list}){
     return(
-        <div className={`relative flex flex-col gap-1 shadow-xl p-8 mb-10 rounded-lg group bg-gradient-radial from-zinc-900 to-background/75`}>
+        <div className={`relative flex flex-col gap-1 shadow-xl p-8 mb-10 rounded-lg group bg-gradient-radial from-zinc-700 to-zinc-900/80`}>
                     <H3>{listTitle}</H3>
             <Line direction="left"/>
             <ul className="relative h-full flex flex-wrap py-2 group gap-10 justify-center">
@@ -100,7 +100,7 @@ export function DetailsCard({children, details,link,listTitle,list,title,markdow
     return(
         <div className="rounded-md">
             <SkillsCard list={list} listTitle={listTitle}/>
-            <div className={`flex flex-col gap-1 shadow-xl p-8 mb-20 rounded-lg group bg-gradient-radial from-zinc-900 to-background/75`}>
+            <div className={`flex flex-col gap-1 shadow-xl p-8 mb-20 rounded-lg group bg-gradient-radial from-zinc-700 to-zinc-900/80`}>
                 
                 <H3>{title}</H3>
             

@@ -20,6 +20,8 @@ const config: Config = {
       reverselinewiggle: 'linewiggle 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite reverse',
       wiggle: 'wiggle .6s ease-in-out infinite',
       hardwiggle: 'wiggle .2s ease-in-out infinite',
+      softwiggle: 'wiggle 12s ease-in-out infinite',
+      breathe: 'breathe 2s ease-in-out infinite',
       modalEnter: 'modalEnter .2s ease-in-out',
       slideUpEnter: 'slideUpEnter .3s ease-in-out',
       slideUpLeave: 'slideUpLeave .3s ease-in-out',
@@ -188,7 +190,7 @@ const config: Config = {
       },
       wiggle: {
         '0%': { 
-          transform: 'scale(1.1)',
+          transform: 'scale(1)',
           transformOrigin: '150px 50px',
           x: '0px',
           y: '0px',
@@ -221,9 +223,19 @@ const config: Config = {
           transform: 'rotate(1.2deg) scale(0.9)',
         },
         '100%': { 
-          transform: 'scale(1.1)',
+          transform: 'scale(1)',
+          transformOrigin: '150px 50px',
           x: '0px',
           y: '0px',
+        },
+      },
+      breathe: {
+        '0%, 100%': { 
+          transform: 'scale(1)',
+        },
+        '50%': { 
+          transform: 'rotate(1.1deg) scale(1.1)',
+ 
         },
       },
       modalEnter: {

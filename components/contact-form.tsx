@@ -81,7 +81,7 @@ export function ContactForm(){
       console.log(name, email, phone, message);
     };
     return (
-      <section className='relative z-70 w-full md:w-[280px] px-6 bg-gradient-radial from-zinc-900 to-background rounded-md mt-10'>
+      <section className='relative z-70 w-full md:w-[280px] px-6 bg-gradient-radial from-zinc-700 to-zinc-900/80 rounded-md mt-10'>
               <form
               className="">
 
