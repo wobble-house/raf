@@ -78,35 +78,6 @@ export function ProjectDetails({
     )
 }
 
-export function DashboardDetails({ 
-    details,
-    link,
-    list,
-    listTitle,
-    title,
-   }:{ 
-      details: string,
-      link: any,
-      list:{
-                alt: string,
-                href: string,
-                src: string,
-            }[],
-      listTitle: string,
-      title : string,
-   }){
-    return(
-    <div className={`relative flex flex-col max-w-lg mx-auto justify-center gap-10 shadow-2xl z-60`}>
-        <div className={`relative flex flex-col md:flex-row rounded-lg gap-8 md:gap-4 items-start justify-start group overscroll-auto bg-gradient-radial from-accent from-25% via-background shadow-2xl`}>
-            <div className={`z-20 relative flex flex-col px-4 pt-2 pb-4 w-full group min-h-[300px] shadow-2xl`}>
-                <H1>{title}</H1>
-                <Line direction="left"/>
-            </div>
-        </div>
-        <DetailsCard details={details} link={link} listTitle={listTitle} list={list} title={"Details"}/>
-    </div>
-    )
-}
 
 export function SkillsCard({listTitle,list}){
     return(
