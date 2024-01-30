@@ -1,9 +1,7 @@
-export function H1({children, position}:{children: React.ReactNode, position?: string}){
-    const opposite = position = "center" ? "center": (position == "right" ? "left" : "right")
-    const p = opposite.slice(0,1)
+export function H1({children}:{children: React.ReactNode}){
     return(
-        <div className={`animate-wiggle active:animate-hardwiggle group-active:animate-hardwiggle ${position == "center" ? "group-hover:mx-auto":("group-hover:m"+p+"r-4")}  cursor-pointer active:brightness-200 group-active:invert`}>
-        <h1 className={` z-50 text-4xl md:text-5xl ${position == "right" ? "text-right":"text-left"} font-extrabold hover:invert group-active:brightness-200 group-hover:scale-105 transition-all ease-in-out font-sans animate-text bg-clip-text text-transparent bg-gradient-radial from-accent via-purple-500 to-secondary`}>{children}</h1>
+        <div className={`relative animate-wiggle active:animate-hardwiggle group-active:animate-hardwiggle ml-4 cursor-pointer active:brightness-200 group-active:invert`}>
+            <h1 className={`z-60 text-4xl md:text-5xl text-left font-extrabold hover:invert group-active:brightness-200 group-hover:scale-105 transition-all ease-in-out font-sans animate-text bg-clip-text text-transparent bg-gradient-radial from-accent via-purple-500 to-secondary`}>{children}</h1>
         </div>
         )
 }
