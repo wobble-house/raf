@@ -14,11 +14,6 @@ export default function Portfolio() {
         <Line direction="left"/>
         <ProjectList projects={projects}/>
       </div>
-      <div className="relative flex flex-col justify-between pt-8 px-8 bg-gradient-radial from-zinc-700 to-zinc-900/80 rounded-md z-40">
-        <H1>Personal Projects</H1>
-        <Line direction="left"/>
-        <ProjectList projects={projects}/>
-      </div>
     </main>
   )
 }
