@@ -14,6 +14,14 @@ export default function Footer(){
                 rel="noopener noreferrer">
 Github
             </Link>
+            <Link
+                href='https://www.linkedin.com/in/rossalanford/'
+                className={`text-foreground hover:text-primary active:text-secondary font-sans`}
+                passHref
+                target="_blank"
+                rel="noopener noreferrer">
+Linkedin
+            </Link>
         </div>
     </div>
     )
