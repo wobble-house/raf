@@ -1,6 +1,7 @@
 export const about = {
     title: "About",
-    link: "https://github.com/wobble-house/",
+    gitlink: null,
+    link: null,
     listTitle: "Skills",
     list: [
         {

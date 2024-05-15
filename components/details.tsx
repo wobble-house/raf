@@ -7,6 +7,7 @@ import { H1,H3 } from "./header-text"
 export function AboutDetails({ 
     children,
     image,
+    gitlink,
     link,
     list,
     listTitle,
@@ -17,7 +18,8 @@ export function AboutDetails({
           src: string,
           alt: string
       },
-      link: any,
+      gitlink?: any,
+      link?: any,
       list:{
         alt: string
         href: string,
@@ -35,7 +37,7 @@ export function AboutDetails({
                 <Line direction="left"/>
             </div>
         </div>
-        <DetailsCard link={link} listTitle={listTitle} list={list} title={"Bio"} markdown>{children}</DetailsCard>
+        <DetailsCard gitlink={gitlink} link={link} listTitle={listTitle} list={list} title={"Bio"} markdown>{children}</DetailsCard>
     </div>
     )
 }
@@ -109,7 +111,7 @@ export function DetailsCard({children, details,gitlink,link,listTitle,list,title
                 <Line direction="left"/>
                 {markdown ? children : <p className={`font-thin text-sm`}>{details}</p>}
                 <div className="flex flex-row gap-2 w-full justify-evenly">
-                {link !== null ? <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse active:scale-90 px-2 hover:scale-110">Link to website</Link> : null}
+                {link ? <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse active:scale-90 px-2 hover:scale-110">Link to website</Link> : null}
                 {gitlink !== null ? <Link href={gitlink} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse px-2 hover:scale-110">Github</Link> : null}
                 </div>
         </div>
