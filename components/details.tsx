@@ -43,6 +43,7 @@ export function AboutDetails({
 export function ProjectDetails({ 
     details,
     image,
+    gitlink,
     link,
     list,
     listTitle,
@@ -53,6 +54,7 @@ export function ProjectDetails({
           src: string,
           alt: string
       },
+      gitlink: any,
       link: any,
       list:{
         alt: string
@@ -73,7 +75,7 @@ export function ProjectDetails({
                 <Line direction="left"/>
             </div>
         </div>
-        <DetailsCard details={details} link={link} listTitle={listTitle} list={list} title={"Details"}/>
+        <DetailsCard details={details} gitlink={gitlink} link={link} listTitle={listTitle} list={list} title={"Details"}/>
     </div>
     )
 }
@@ -95,7 +97,7 @@ export function SkillsCard({listTitle,list}){
     )
 }
 
-export function DetailsCard({children, details,link,listTitle,list,title,markdown}:{children?, details?:string,link:any,listTitle:string,list:{alt:string,href:string,src:string}[],title:string,markdown?:boolean}){
+export function DetailsCard({children, details,gitlink,link,listTitle,list,title,markdown}:{children?, details?:string,gitlink?:any,link:any,listTitle:string,list:{alt:string,href:string,src:string}[],title:string,markdown?:boolean}){
 
     return(
         <div className="rounded-md">
@@ -107,8 +109,8 @@ export function DetailsCard({children, details,link,listTitle,list,title,markdow
                 <Line direction="left"/>
                 {markdown ? children : <p className={`font-thin text-sm`}>{details}</p>}
                 <div className="flex flex-row gap-2 w-full justify-evenly">
-                <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse active:scale-90 px-2 hover:scale-110">Link to website</Link>
-                <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse px-2 hover:scale-110">Github</Link>
+                {link !== null ? <Link href={link} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse active:scale-90 px-2 hover:scale-110">Link to website</Link> : null}
+                {gitlink !== null ? <Link href={gitlink} className="text-secondary hover:bg-primary hover:text-background hover:font-bold border-primary border-2 hover:border-none rounded-md hover:rounded-lg hover:animate-pulse px-2 hover:scale-110">Github</Link> : null}
                 </div>
         </div>
         </div>

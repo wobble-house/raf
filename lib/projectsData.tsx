@@ -2,6 +2,7 @@ export const projects = [
     {
         title: "A2IM", 
         link: "https://www.a2im.org", 
+        gitlink: null,
         listTitle: "front-end", 
         list: [
             {
@@ -64,6 +65,7 @@ export const projects = [
     },
     {
         title: "Libera Awards", 
+        gitlink: "https://github.com/a2im/libera",
         link: "https://www.liberaawards.com", 
         listTitle: 'full-stack', 
         list: [
@@ -183,6 +185,7 @@ export const projects = [
     },
     {
         title: "Indie Week", 
+        gitlink: "https://github.com/a2im/indieweek2",
         link: "https://www.a2imindieweek.org", 
         listTitle: "full-stack", 
         list: [
@@ -301,6 +304,7 @@ export const projects = [
     },
     {
         title: "Knowledge base", 
+        gitlink: "https://github.com/a2im/kb",
         link: "https://knowledge-base.a2im.org", 
         listTitle: "full-stack", 
         list: [
@@ -419,7 +423,8 @@ export const projects = [
     },
     {
         title: "Headless CMS", 
-        link: "", 
+        gitlink: "https://github.com/a2im/a2im-cms",
+        link: null, 
         listTitle: "back-end", 
         list: [
             {
@@ -517,6 +522,7 @@ export const projects = [
     },
     {
         title: "CCFIL", 
+        gitlink: "https://github.com/wobble-house/ccfil-app",
         link: "https://www.ccfil.com/", 
         listTitle: "full-stack", 
         list: [
